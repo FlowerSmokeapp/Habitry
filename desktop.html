@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Habitry – vanetracker</title>
+<title>Habitry – habit tracker</title>
 <link rel="icon" href="icons/icon-192.png">
 <script>if(!matchMedia('(min-width: 760px)').matches) location.replace('index.html?app');</script>
 <style>
@@ -17,7 +17,7 @@ body{margin:0;height:100vh;overflow:hidden;background:radial-gradient(1100px 700
 <body>
 <div class="phone"><iframe src="index.html?app" title="Habitry app"></iframe></div>
 <script>
-// Skalér hele telefonen, så den fylder skærmens højde
+// Scale the whole phone to fill the window height
 function fit(){ var s = Math.min((innerHeight - 40) / 862, (innerWidth - 40) / 408); document.querySelector('.phone').style.transform = 'scale(' + s + ')'; }
 fit(); addEventListener('resize', fit);
 </script>

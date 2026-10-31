@@ -1,10 +1,10 @@
-# HABITRY – vanetracker
+# Habitry – habit tracker
 
-Mobil web-app (PWA): opret vaner, sæt påmindelser, få streaks og belønninger, opdel i morgen/eftermiddag/aften og se hvilke ugedage det går galt. Kalenderen viser klarede dage i grønt.
+Mobile web app (PWA): create habits, set reminders, earn streaks and rewards, split your day into morning/afternoon/evening, and see which weekdays you slip. The calendar shows completed days in green.
 
-- Gratis: 3 vaner. Premium (25 kr./md. eller 149 kr./år): ubegrænsede vaner, widgets, detaljerede grafer og temaer (prototype – ingen rigtig betaling).
-- På computer vises appen i en telefon-ramme, der fylder hele skærmhøjden (`desktop.html`).
-- På mobil åbner den som normal app og kan gemmes på hjemmeskærmen (virker også offline).
-- Data gemmes lokalt på enheden (localStorage).
+- Free: 3 habits. Premium (DKK 25/month or DKK 149/year): unlimited habits, widgets, detailed charts and themes (prototype – no real payment).
+- Sign in with email and password. Without setup, accounts are stored on the device (prototype mode). Add a Firebase config in `firebase-config.js` to store data in the cloud and sync across devices (Google sign-in included).
+- On desktop the app is shown inside a phone frame that fills the window (`desktop.html`).
+- On mobile it opens as a normal app and can be added to the home screen (works offline).
 
-Kør lokalt: `python3 -m http.server` og åbn http://localhost:8000
+Run locally: `python3 -m http.server` and open http://localhost:8000
