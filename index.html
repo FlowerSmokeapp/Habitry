@@ -10,7 +10,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="Streak">
+<meta name="apple-mobile-web-app-title" content="Habitry">
 <script>
 (function(){
   var standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone;
@@ -20,7 +20,7 @@
   if(desktop && !standalone && !framed && location.protocol.indexOf('http')===0 && !/[?&]app/.test(location.search)) location.replace('desktop.html');
 })();
 </script>
-<title>Streak – vanetracker</title>
+<title>Habitry – vanetracker</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -186,7 +186,7 @@ details summary{cursor:pointer;color:var(--ink2);font-size:13px;font-weight:700;
 <div class="app">
   <header>
     <div>
-      <div class="logo">STRE<span>A</span>K</div>
+      <div class="logo">HAB<span>I</span>TRY</div>
       <div class="sub" id="todayLabel"></div>
     </div>
     <button class="pill" id="premBtn"></button>
@@ -244,7 +244,7 @@ const dowIdx = d => (d.getDay()+6)%7; // Mon=0
 const today = () => { const t = new Date(); t.setHours(0,0,0,0); return t; };
 
 // ---------- state ----------
-const STORE = 'streak-v1';
+const STORE = 'habitry-v1';
 let S, fresh = false;
 function seed(){
   const t = today();
@@ -552,7 +552,7 @@ function viewMore(){
   // mini heatmap last 28 days
   let mini=''; for(let i=27;i>=0;i--){ const d=addDays(today(),-i), f=dayFrac(d); const col = f==null?'#e3e8e4':f===0?'#fbe3e0':f<.5?'var(--a1)':f<.75?'var(--a2)':f<1?'var(--a3)':'var(--a4)'; mini+=`<i style="background:${col}"></i>`; }
   const widgets = `<div class="phone">
-      <div class="wdg"><div class="t">Streak</div><div style="font-size:30px;font-weight:800">${doneToday}/${todayN}</div><div style="font-size:12px;color:#55605a">klaret i dag · 🔥 ${Math.max(0,...st.map(x=>x.c))}</div></div>
+      <div class="wdg"><div class="t">Habitry</div><div style="font-size:30px;font-weight:800">${doneToday}/${todayN}</div><div style="font-size:12px;color:#55605a">klaret i dag · 🔥 ${Math.max(0,...st.map(x=>x.c))}</div></div>
       <div class="wdg"><div class="t">Sidste 4 uger</div><div class="mini">${mini}</div></div>
       <div class="wdg wide"><div class="t">Næste vaner</div>${S.habits.filter(h=>scheduled(h,today())&&!isDone(h,key(today()))).slice(0,3).map(h=>`<div style="display:flex;justify-content:space-between;font-size:14px;font-weight:700;margin-top:6px"><span>${h.emoji} ${esc(h.name)}</span><span style="color:#55605a">${h.time||''}</span></div>`).join('') || '<div style="font-size:14px;font-weight:700;margin-top:6px">Alt klaret 🎉</div>'}</div>
       <div class="app-ic"><div></div>Kalender</div><div class="app-ic"><div></div>Musik</div>
@@ -621,7 +621,7 @@ function habitForm(h){
 function paywall(reason){
   let plan = S.plan || 'year';
   const draw = () => openSheet(`<div style="text-align:center;font-size:40px">★</div>
-    <h2 style="text-align:center;font-size:22px">Streak Premium</h2>
+    <h2 style="text-align:center;font-size:22px">Habitry Premium</h2>
     ${reason?`<p class="muted" style="text-align:center">${reason}</p>`:''}
     <ul class="feat"><li>♾️ Ubegrænsede vaner</li><li>📱 Widgets på startskærmen</li><li>📈 Detaljerede grafer og trends</li><li>🎨 Skift mellem 5 temaer</li></ul>
     <div class="plans">
@@ -663,7 +663,7 @@ function tick(){
     S.fired = {[fk]:1, ...Object.fromEntries(Object.entries(S.fired).filter(([x])=>x.startsWith(k)))}; save();
     const msg = `⏰ Tid til: ${h.emoji} ${h.name}`;
     toast(msg);
-    try{ if('Notification' in window && Notification.permission==='granted') new Notification('Streak', {body: msg}); }catch(e){}
+    try{ if('Notification' in window && Notification.permission==='granted') new Notification('Habitry', {body: msg}); }catch(e){}
   });
 }
 setInterval(tick, 20000); tick();

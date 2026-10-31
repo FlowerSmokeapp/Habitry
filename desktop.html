@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Streak – vanetracker</title>
+<title>Habitry – vanetracker</title>
 <link rel="icon" href="icons/icon-192.png">
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&display=swap" rel="stylesheet">
 <script>if(!matchMedia('(min-width: 760px)').matches) location.replace('index.html?app');</script>
@@ -30,14 +30,14 @@ li:after{content:"";position:absolute;left:5px;top:12px;width:8px;height:4px;bor
 </head>
 <body>
 <div class="info">
-  <div class="logo">STRE<span>A</span>K</div>
+  <div class="logo">HAB<span>I</span>TRY</div>
   <h2>Vaner du kan se på ét blik</h2>
   <p>En kalender hvor grøn betyder klaret. Opret vaner som at drikke vand, læse eller træne, få påmindelser og byg streaks – og se præcis hvilke dage det går galt.</p>
   <ul><li>Morgen, eftermiddag og aften</li><li>Påmindelser, streaks og belønninger</li><li>Statistik over dine svage ugedage</li><li>Gratis med 3 vaner</li></ul>
   <span class="price">★ Premium: 25 kr./md. eller 149 kr./år</span>
-  <div class="qr"><div id="qrcode"></div><div><b>Åbn på din telefon</b><span style="color:#55605a;font-size:14px">Scan koden med kameraet, og gem Streak på hjemmeskærmen.</span></div></div>
+  <div class="qr"><div id="qrcode"></div><div><b>Åbn på din telefon</b><span style="color:#55605a;font-size:14px">Scan koden med kameraet, og gem Habitry på hjemmeskærmen.</span></div></div>
 </div>
-<div class="phone"><iframe src="index.html?app" title="Streak app"></iframe></div>
+<div class="phone"><iframe src="index.html?app" title="Habitry app"></iframe></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
 try{ new QRCode(document.getElementById('qrcode'), {text: new URL('./', location.href).href, width:120, height:120, colorDark:'#15201a', colorLight:'#ffffff'}) }catch(e){ document.querySelector('.qr').style.display='none' }
