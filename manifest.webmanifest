@@ -1,6 +1,6 @@
 {
-  "name": "Rutine – vanetracker",
-  "short_name": "Rutine",
+  "name": "Streak – vanetracker",
+  "short_name": "Streak",
   "description": "Opret vaner, få påmindelser, streaks og se på ét blik hvilke dage det går galt.",
   "lang": "da",
   "start_url": "./index.html?app",

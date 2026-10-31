@@ -1,4 +1,4 @@
-# RUTINE – vanetracker
+# STREAK – vanetracker
 
 Mobil web-app (PWA): opret vaner, sæt påmindelser, få streaks og belønninger, opdel i morgen/eftermiddag/aften og se hvilke ugedage det går galt. Kalenderen viser klarede dage i grønt.
 
